@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Traço Digital — ideias ganham forma na web</title>
+<meta name="description" content="Traço Digital: criação de landing pages e sites sob medida. Conheça estilos, explore demonstrações conceituais e peça seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#080910">
+<meta property="og:title" content="Traço Digital — ideias ganham forma na web">
+<meta property="og:description" content="Criação de landing pages e sites com personalidade, clareza e propósito.">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700;900&family=Space+Grotesk:wght@400;500;700&family=UnifrakturCook:wght@700&family=VT323&display=swap" rel="stylesheet">
+<style>
+@property --gl{syntax:'<color>';inherits:true;initial-value:#00ff66}
+:root{--bg:#07070d;--fg:#ececf6;--mut:#9a9ab5;--v:#8b6cff;--c:#22d3ee;--p:#ff4fa3}
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;min-width:320px;scroll-behavior:smooth;color-scheme:dark;overflow-x:hidden;overflow-x:clip}
+body{width:100%;min-width:320px;margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== cabeçalho, progresso, cursor ===== */
+header{position:fixed;inset:0 0 auto;z-index:100;padding-top:env(safe-area-inset-top,0px);background:linear-gradient(rgba(7,7,13,.85),rgba(7,7,13,0));pointer-events:none}
+header>*{pointer-events:auto}
+.hb{height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font:700 18px 'Space Grotesk';letter-spacing:-.02em;text-decoration:none}
+.logo i{display:block;width:13px;height:13px;transform:rotate(45deg);background:linear-gradient(135deg,var(--v),var(--c));box-shadow:0 0 14px var(--v)}
+nav.m{display:flex;align-items:center;gap:6px}
+nav.m a{font:500 14px 'Space Grotesk';text-decoration:none;color:var(--mut);padding:8px 12px;border-radius:99px;transition:color .2s,background .2s}
+nav.m a:hover{color:#fff;background:rgba(255,255,255,.08)}
+nav.m .btn{min-height:38px;padding:0 18px;font-size:14px;color:#06060c}
+@media(max-width:760px){nav.m a:not(.btn){display:none}}
+@media(max-width:520px){#intro{padding-top:94px;padding-bottom:88px}#intro .wrap{padding-inline:22px}.gt{font-size:clamp(40px,11vw,64px);letter-spacing:-.055em}.sub{font-size:16px;margin-top:20px;margin-bottom:26px}#term{font-size:22px;min-height:84px}.cue{bottom:16px}}
+@media(max-height:620px) and (min-width:761px){#intro{min-height:680px;padding-top:88px;padding-bottom:82px}#term{min-height:60px;margin-bottom:18px}.sub{margin-top:18px;margin-bottom:22px}.cue{bottom:12px}.cue::after{height:22px}}
+#prog{position:fixed;z-index:101;left:0;top:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--v),var(--c),var(--p))}
+#cur{position:fixed;left:0;top:0;z-index:200;pointer-events:none;mix-blend-mode:difference;opacity:0;transition:opacity .3s}
+#cur.v{opacity:1}
+#cur i{display:block;width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid #fff;border-radius:50%;transition:transform .25s,background .25s}
+#cur.h i{transform:scale(1.8);background:#fff}
+@media(pointer:coarse){#cur{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:99px;border:0;cursor:pointer;font:700 16px 'Space Grotesk',sans-serif;text-decoration:none;color:#06060c;background:linear-gradient(110deg,var(--v),var(--c) 60%,var(--v));background-size:200% 100%;box-shadow:0 0 40px rgba(139,108,255,.45);transition:transform .2s,background-position .7s,box-shadow .3s}
+.btn:hover{background-position:100% 0;box-shadow:0 0 60px rgba(34,211,238,.5)}
+.btn.gh{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.22);box-shadow:none;backdrop-filter:blur(8px)}
+
+/* ===== intro: terminal de 1995 ===== */
+#intro{position:relative;width:100%;min-width:0;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;padding:104px 0 96px;overflow:hidden;background:#000}
+#intro .wrap{width:min(100%,1160px);min-width:0;margin-inline:auto;padding-inline:clamp(20px,5vw,64px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+#intro .gt{display:block;width:100%;max-width:100%;margin-inline:auto;text-wrap:balance;overflow-wrap:break-word}
+#intro .sub{width:min(100%,650px);max-width:650px;margin-inline:auto}
+#intro .btn{max-width:100%;white-space:normal}
+#intro::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(0deg,rgba(0,255,102,.06) 0 1px,transparent 1px 3px)}
+#intro::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at 50% 50%,transparent 40%,rgba(0,0,0,.85))}
+#intro .grid{position:absolute;inset:-20% -10% auto;height:120%;z-index:0;opacity:.35;background:linear-gradient(rgba(0,255,102,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,102,.35) 1px,transparent 1px);background-size:60px 60px;transform:perspective(500px) rotateX(62deg);transform-origin:50% 0;mask:linear-gradient(#000 10%,transparent 75%);animation:gridm 3s linear infinite}
+@keyframes gridm{to{background-position:0 60px}}
+#intro .wrap{z-index:3}
+#term{font:26px/1.25 'VT323',monospace;color:#00ff66;text-align:left;width:max-content;max-width:100%;margin:0 auto 30px;min-height:96px;text-shadow:0 0 10px rgba(0,255,102,.7)}
+#term div:last-child::after{content:"▮";margin-left:4px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.gt{position:relative;margin:0;font:700 clamp(46px,11vw,150px)/.9 'Space Grotesk';letter-spacing:-.055em;color:#fff}
+.gt::before,.gt::after{content:attr(data-t);white-space:pre-line;position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen}
+.gt::before{color:#0ff;clip-path:inset(0 0 60% 0);transform:translate(-4px,0);animation:g1 2.6s infinite steps(1)}
+.gt::after{color:#f0f;clip-path:inset(55% 0 0 0);transform:translate(4px,0);animation:g2 2.2s infinite steps(1)}
+@keyframes g1{0%,88%{clip-path:inset(0 0 60% 0);transform:translate(-3px,0)}90%{clip-path:inset(30% 0 40% 0);transform:translate(-12px,2px)}93%{clip-path:inset(70% 0 5% 0);transform:translate(9px,0)}96%{clip-path:inset(10% 0 70% 0);transform:translate(-6px,-2px)}100%{clip-path:inset(0 0 60% 0);transform:translate(-3px,0)}}
+@keyframes g2{0%,80%{clip-path:inset(55% 0 0 0);transform:translate(3px,0)}83%{clip-path:inset(15% 0 60% 0);transform:translate(12px,-2px)}87%{clip-path:inset(80% 0 0 0);transform:translate(-9px,0)}100%{clip-path:inset(55% 0 0 0);transform:translate(3px,0)}}
+.sub{max-width:560px;margin:26px auto 34px;color:#b9c9c0;font-size:clamp(17px,2.4vw,21px)}
+.js #intro .rise{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.js #intro.ready .rise{opacity:1;transform:none}
+.js #intro.ready .r2{transition-delay:.25s}.js #intro.ready .r3{transition-delay:.5s}
+.cue{position:absolute;z-index:3;left:50%;bottom:26px;transform:translateX(-50%);font:500 12px 'Space Grotesk';letter-spacing:.2em;text-transform:uppercase;color:#6f8;display:flex;flex-direction:column;align-items:center;gap:10px}
+.cue::after{content:"";width:1px;height:38px;background:linear-gradient(#6f8,transparent);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ===== a viagem no tempo ===== */
+#tempo{position:relative;height:720vh;height:720svh;background:#050509}
+.stage{--gl:#00ff66;position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;transition:--gl .7s;background:radial-gradient(70vmax 45vmax at 50% 62%,color-mix(in srgb,var(--gl) 20%,transparent),transparent 70%),#050509}
+.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1px);background-size:30px 30px;mask:radial-gradient(ellipse at 50% 50%,#000 20%,transparent 75%)}
+.hud{position:absolute;z-index:5;left:0;right:0;top:74px;pointer-events:none}
+.hud .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.yr{font:700 clamp(54px,12vw,128px)/.85 'Space Grotesk';letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--gl);text-shadow:0 0 50px color-mix(in srgb,var(--gl) 60%,transparent)}
+.hm{max-width:440px;text-align:right}
+.hm h2{font:700 clamp(20px,3vw,28px)/1.1 'Space Grotesk';letter-spacing:-.02em;margin:0 0 6px}
+.hm p{margin:0 0 10px;color:var(--mut);font-size:15px;line-height:1.45}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.chips b{font:500 12px 'Space Grotesk';padding:3px 10px;border:1px solid color-mix(in srgb,var(--gl) 55%,transparent);border-radius:99px;color:var(--gl)}
+.hm.sw{animation:sw .55s both}
+@keyframes sw{from{opacity:0;transform:translateY(10px);filter:blur(6px)}}
+@media(max-width:700px){.hud{top:66px}.hud .wrap{align-items:flex-start}.hm{max-width:55%}.hm p,.chips{display:none}.win{width:calc(100vw - 16px)}}
+
+.win{position:absolute;z-index:3;display:flex;flex-direction:column;overflow:hidden;background:#000;width:min(920px,calc(100vw - 24px));height:60vh;left:50%;top:232px;transform:translateX(-50%);box-shadow:0 30px 90px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.08),0 0 90px color-mix(in srgb,var(--gl) 28%,transparent)}
+.bar{flex:none;height:42px;display:flex;align-items:center;gap:10px;padding:0 12px;overflow:hidden}
+.dots{display:flex;gap:6px}
+.dots i{width:12px;height:12px;border-radius:50%;background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.bt{display:flex;gap:4px;font:700 15px Arial}.bt span{padding:0 5px}
+.url{flex:1;min-width:0;height:26px;display:flex;align-items:center;padding:0 12px;font:13px 'Space Grotesk',Arial;white-space:nowrap;overflow:hidden}
+.win[data-e="0"]{border-radius:0}
+.win[data-e="0"] .bar{background:#c0c0c0;border-bottom:2px solid #808080;color:#000;font-family:Arial}
+.win[data-e="0"] .dots{display:none}
+.win[data-e="0"] .bt span{border:2px outset #fff;background:#c0c0c0;font:12px Arial;padding:2px 8px}
+.win[data-e="0"] .url{background:#fff;border:2px inset #808080;font:13px 'Courier New',monospace;color:#000}
+.win[data-e="1"]{border-radius:8px 8px 0 0}
+.win[data-e="1"] .bar{background:linear-gradient(#3a81f3,#245edb 45%,#1b4fc4);color:#fff}
+.win[data-e="1"] .dots{order:3}.win[data-e="1"] .dots i{width:20px;height:18px;border-radius:3px;border:1px solid #fff;background:#2f6fe0}.win[data-e="1"] .dots i:nth-child(3){background:#d9482b}
+.win[data-e="1"] .url{background:#fff;color:#000;border:1px solid #7f9db9;font-family:Tahoma,Arial}
+.win[data-e="2"]{border-radius:6px}
+.win[data-e="2"] .bar{background:linear-gradient(#f4f6f9,#d5dbe3);border-bottom:1px solid #9aa4b2;color:#334}
+.win[data-e="2"] .dots i{background:radial-gradient(circle at 35% 30%,#fff,#9aa4b2)}
+.win[data-e="2"] .url{background:linear-gradient(#fff,#f1f4f8);border:1px solid #a9b4c2;border-radius:14px;color:#334}
+.win[data-e="3"]{border-radius:8px}
+.win[data-e="3"] .bar{background:#dee1e6;color:#3c4043}
+.win[data-e="3"] .url{background:#fff;border-radius:99px;color:#202124}
+.win[data-e="4"] .bar{background:rgba(16,16,28,.96);color:#cfcfe6;border-bottom:1px solid rgba(255,255,255,.08)}
+.win[data-e="4"] .url{background:rgba(255,255,255,.07);border-radius:99px}
+.win[data-e="4"] .url::before{content:"🔒︎ ";opacity:.7}
+
+.view{position:relative;flex:1;min-height:0;overflow:hidden;--k:1}
+.view::after{content:"";position:absolute;inset:0;z-index:9;pointer-events:none;opacity:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.2) 0 1px,transparent 1px 3px)}
+.gl .view::after{opacity:1}
+.sw2{position:absolute;left:0;right:0;top:-25%;height:22%;z-index:10;pointer-events:none;background:linear-gradient(transparent,rgba(255,255,255,.6),transparent);mix-blend-mode:overlay}
+.gl .sw2{animation:swp .6s ease-in}
+@keyframes swp{to{top:110%}}
+.gl{animation:gl .62s steps(2,end)}
+@keyframes gl{0%{filter:none}10%{transform:translateX(-50%) translate(-9px,2px) skewX(5deg);filter:hue-rotate(90deg) contrast(2)}20%{transform:translateX(-50%) translate(11px,-3px);filter:saturate(3)}35%{clip-path:inset(20% 0 55% 0)}50%{clip-path:inset(62% 0 8% 0);transform:translateX(-50%) translate(-7px,0)}70%{clip-path:none;filter:invert(1)}100%{filter:none}}
+.pgw{position:absolute;inset:0;display:flex;justify-content:center;visibility:hidden;pointer-events:none}
+.pgw.on{visibility:visible;pointer-events:auto}
+.pg{flex:none;width:880px;height:520px;transform:scale(var(--k));transform-origin:50% 0;overflow:hidden;position:relative}
+.pgw.fl{display:block;container-type:size}
+
+.rail{position:absolute;z-index:6;left:0;right:0;bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.rl{position:relative;display:flex;max-width:720px;margin:0 auto;padding:0 14px}
+.tr{position:absolute;left:10%;right:10%;top:5px;height:2px;background:rgba(255,255,255,.14)}
+.tr i{display:block;height:100%;width:0;background:var(--gl);box-shadow:0 0 12px var(--gl)}
+.rb{flex:1;position:relative;background:none;border:0;color:var(--mut);cursor:pointer;font:500 13px 'Space Grotesk';padding:18px 4px 2px}
+.rb::before{content:"";position:absolute;left:50%;top:0;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#1a1a26;border:2px solid #3a3a52;transition:.3s}
+.rb.on{color:#fff}.rb.on::before{background:var(--gl);border-color:var(--gl);box-shadow:0 0 16px var(--gl);transform:scale(1.25)}
+
+/* páginas de cada época (tamanho virtual 880×520) */
+.p1{background:#c0c0c0;color:#000;font:20px/1.3 'Times New Roman',Times,serif;padding:16px 28px}
+.p1 .mq{background:#000;color:#0f0;font:15px 'Courier New',monospace;padding:3px 0;overflow:hidden;white-space:nowrap;border:2px inset #fff}
+.p1 .mq span{display:inline-block;padding-left:100%;animation:mqa 13s linear infinite}
+@keyframes mqa{to{transform:translateX(-100%)}}
+.p1 .h{font-weight:700;font-size:40px;text-align:center;margin:16px 0 8px;line-height:1.1}
+.p1 hr{border:0;border-top:2px groove #fff;border-bottom:1px solid #808080;margin:12px 0}
+.p1 .two{display:grid;grid-template-columns:1fr 270px;gap:24px;align-items:center}
+.p1 p{margin:6px 0}.p1 ul{margin:6px 0;padding-left:30px}
+.p1 a{color:#00e;text-decoration:underline}.p1 a.vis{color:#551a8b}
+.p1 .uc{height:150px;display:grid;place-items:center;border:4px solid #000;background:repeating-linear-gradient(45deg,#ff0 0 14px,#000 14px 28px)}
+.p1 .uc b{background:#000;color:#ff0;padding:8px 14px;font:700 17px 'Courier New',monospace}
+.p1 .sm{font-size:16px}.p1 .ctr{font:16px 'Courier New',monospace;background:#000;color:#0f0;padding:0 6px;letter-spacing:3px}
+.p1 .bl{color:#f00;font-weight:700;animation:blink 1s steps(2) infinite}
+
+.p2{background:radial-gradient(ellipse at 50% 0,#1b3a8a,#07112e 70%);color:#cfe3ff;font:14px Verdana,Tahoma,sans-serif;text-align:center;padding:30px}
+.p2 .lg{font:900 76px/1 Impact,'Arial Black',sans-serif;letter-spacing:3px;background:linear-gradient(#fff 0,#9fc7ff 45%,#2d63d6 50%,#bcd8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 14px #3b82ff) drop-shadow(0 3px 0 #001a66)}
+.p2 .sb2{color:#8fb8ff;letter-spacing:4px;margin-top:2px}
+.p2 nav{display:flex;gap:8px;justify-content:center;margin:26px 0}
+.p2 nav b{padding:10px 24px;font:700 13px Verdana;color:#fff;border:2px outset #8fb4ff;background:linear-gradient(#7fb0ff,#2a5bd7 50%,#1844b0 52%,#2f66e6);text-shadow:1px 1px #002;border-radius:3px}
+.p2 .ld{width:380px;height:22px;margin:10px auto;border:2px inset #89a;background:#001}
+.p2 .ld i{display:block;height:100%;width:87%;background:repeating-linear-gradient(90deg,#3cf 0 10px,#08c 10px 12px);animation:ldg 3.4s steps(22) infinite}
+@keyframes ldg{from{width:0}}
+.p2 .sk{color:#ff0;text-decoration:underline;font-weight:700}
+.p2 .ft{position:absolute;left:0;right:0;bottom:14px;color:#6f8fcf;font-size:12px}
+.p2 .star{position:absolute;right:56px;top:34px;width:104px;height:104px;display:grid;place-items:center;font:900 15px Verdana;color:#b00;background:linear-gradient(135deg,#ffe600,#ff9900);clip-path:polygon(50% 0,61% 20%,85% 10%,80% 35%,100% 50%,80% 65%,85% 90%,61% 80%,50% 100%,39% 80%,15% 90%,20% 65%,0 50%,20% 35%,15% 10%,39% 20%);animation:spin 5s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.p2 .sp{position:absolute;width:10px;height:10px;background:#fff;transform:rotate(45deg);box-shadow:0 0 12px #8cf;animation:twk 1.6s ease-in-out infinite}
+@keyframes twk{50%{opacity:.1;transform:rotate(45deg) scale(.3)}}
+
+.p3{background:linear-gradient(#bfe3ff 0,#eaf6ff 300px,#fff 100%);color:#234;font:15px 'Lucida Grande','Lucida Sans Unicode',Verdana,sans-serif;padding:22px 44px}
+.p3 .top{display:flex;justify-content:space-between;align-items:center}
+.p3 .brand{font:700 36px 'Trebuchet MS',Verdana;color:#1f6fd0;text-shadow:0 1px 0 #fff;-webkit-box-reflect:below -8px linear-gradient(transparent 55%,rgba(255,255,255,.55))}
+.p3 .nv{display:flex;gap:4px;padding:5px;border-radius:99px;background:linear-gradient(#fff,#d9e6f3);border:1px solid #9fb6cf;box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 1px 0 #fff}
+.p3 .nv b{padding:8px 18px;border-radius:99px;font-size:13px;color:#345;text-shadow:0 1px #fff}
+.p3 .nv b:first-child{background:linear-gradient(#5aa7f5,#1c6fd3);color:#fff;text-shadow:0 -1px rgba(0,0,0,.4)}
+.p3 .hero{margin-top:34px;text-align:center}
+.p3 .big{font:700 54px/1.05 'Trebuchet MS',Verdana;color:#17406d;text-shadow:0 2px 0 #fff,0 5px 10px rgba(0,60,140,.25)}
+.p3 .st{color:#f5a800;font-size:20px;letter-spacing:3px;margin:8px 0 18px;text-shadow:0 1px 0 #fff}
+.p3 .gb{display:inline-block;padding:16px 46px;font:700 22px 'Trebuchet MS';color:#fff;border-radius:14px;background:linear-gradient(#8fe35a,#3fae1c 50%,#2f9a10 52%,#58c430);border:1px solid #2a7a10;box-shadow:0 3px 0 #226b0a,0 9px 16px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.7);text-shadow:0 -1px 0 rgba(0,0,0,.45)}
+.p3 .rib{position:absolute;right:-46px;top:30px;width:190px;padding:5px 0;text-align:center;transform:rotate(40deg);font:700 14px Verdana;color:#fff;background:linear-gradient(#ff6a4d,#c81d0b);box-shadow:0 2px 6px rgba(0,0,0,.4);text-shadow:0 -1px rgba(0,0,0,.4)}
+.p3 .fs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.p3 .fb{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;background:linear-gradient(#fff,#eef5fc);border:1px solid #c5d9ee;box-shadow:0 2px 6px rgba(0,60,140,.15)}
+.p3 .ic{flex:none;position:relative;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff 0,#7cc0ff 30%,#1c6fd3 100%);box-shadow:0 2px 5px rgba(0,0,0,.35)}
+.p3 .ic::after{content:"";position:absolute;left:8px;top:5px;width:30px;height:16px;border-radius:50%;background:linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,0))}
+
+.p4{background:#fff;color:#2c3e50;font:16px/1.5 'Space Grotesk',Helvetica,Arial,sans-serif;--t:0}
+.p4 .nav{height:64px;display:flex;justify-content:space-between;align-items:center;padding:0 36px}
+.p4 .lo{font-weight:700;font-size:22px}.p4 .lo span{color:#e74c3c}
+.p4 .hb2{width:26px;height:3px;background:#2c3e50;position:relative}
+.p4 .hb2::before,.p4 .hb2::after{content:"";position:absolute;left:0;width:26px;height:3px;background:#2c3e50}
+.p4 .hb2::before{top:-8px}.p4 .hb2::after{top:8px}
+.p4 .hero{position:relative;height:330px;background:#3498db;overflow:hidden;display:flex;align-items:center;padding:0 48px}
+.p4 .hero h4{position:relative;z-index:1;margin:0 0 14px;color:#fff;font:700 56px/1.02 'Space Grotesk';letter-spacing:-.03em}
+.p4 .hero p{position:relative;z-index:1;margin:0 0 22px;color:#e8f4fd;max-width:420px}
+.p4 .fbn{position:relative;z-index:1;display:inline-block;padding:14px 32px;background:#e74c3c;color:#fff;font-weight:700;border-radius:3px;box-shadow:0 4px 0 #c0392b}
+.p4 .sh{position:absolute;border-radius:50%;transform:translateY(calc(var(--t)*-70px))}
+.p4 .s1{width:340px;height:340px;right:-60px;top:-40px;background:#2980b9}
+.p4 .s2{width:130px;height:130px;right:200px;bottom:-30px;background:#f1c40f;transform:translateY(calc(var(--t)*-130px))}
+.p4 .s3{width:90px;height:90px;right:70px;bottom:50px;background:#e74c3c;border-radius:0;transform:rotate(calc(var(--t)*160deg)) translateY(calc(var(--t)*-40px))}
+.p4 .cs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px 36px}
+.p4 .cd{padding:16px;border:1px solid #ecf0f1;border-radius:4px;box-shadow:0 2px 0 #ecf0f1;display:flex;gap:12px;align-items:center;font-weight:700}
+.p4 .cd i{flex:none;width:36px;height:36px;border-radius:50%;background:#1abc9c}.p4 .cd:nth-child(2) i{background:#9b59b6}.p4 .cd:nth-child(3) i{background:#f39c12}
+
+.p5{position:absolute;inset:0;overflow:hidden;background:#07070d;color:#fff;font-family:'Space Grotesk',sans-serif}
+.aur{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.aur i{position:absolute;width:55vmax;height:55vmax;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 18s ease-in-out infinite alternate}
+.aur i:nth-child(1){background:#6d4aff;left:-15vmax;top:-12vmax}
+.aur i:nth-child(2){background:#10b5d6;right:-22vmax;top:20%;animation-delay:-6s}
+.aur i:nth-child(3){background:#e0409a;left:20%;bottom:-28vmax;animation-delay:-12s;opacity:.35}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+.p5 canvas{position:absolute;inset:0;width:100%;height:100%}
+.p5 .in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 5cqw}
+.p5 .pl{display:inline-flex;align-items:center;gap:8px;font:500 clamp(11px,1.6cqw,14px) 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);backdrop-filter:blur(8px);color:#cfd0ea}
+.p5 .pl u{width:8px;height:8px;border-radius:50%;background:#5eead4;box-shadow:0 0 12px #5eead4;animation:blink 1.4s steps(2) infinite}
+.p5 .big{font:700 clamp(42px,12cqw,168px)/.9 'Space Grotesk';letter-spacing:-.055em;margin:.18em 0 .12em;padding-bottom:.06em;background:linear-gradient(100deg,#fff 15%,#b5a8ff 45%,#5eead4 75%,#fff);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gsh 7s linear infinite}
+@keyframes gsh{to{background-position:-220% 0}}
+.p5 .sb{max-width:34em;margin:0 0 clamp(14px,3cqw,30px);color:#b6b6d0;font-size:clamp(13px,2cqw,21px);line-height:1.45}
+.p5 .rw{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.p5 .fc{position:absolute;z-index:2;padding:8px 16px;border-radius:14px;font:700 clamp(12px,1.6cqw,15px) 'Space Grotesk';border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);backdrop-filter:blur(10px);animation:flt 6s ease-in-out infinite alternate}
+.p5 .f1{left:8%;top:22%}.p5 .f2{right:7%;top:30%;animation-delay:-2s}.p5 .f3{left:12%;bottom:18%;animation-delay:-4s}
+@keyframes flt{to{transform:translateY(-16px) rotate(2deg)}}
+@container (max-width:620px){.p5 .fc{display:none}}
+.p5 .dn{position:absolute;z-index:2;left:0;right:0;bottom:12px;text-align:center;font:500 12px 'Space Grotesk';letter-spacing:.2em;text-transform:uppercase;color:#7c7c9c}
+
+/* ===== depois da viagem ===== */
+.after{position:relative;background:var(--bg);overflow:hidden}
+.after::before,.after::after{content:"";position:absolute;width:90vmax;height:90vmax;border-radius:50%;pointer-events:none}
+.after::before{left:-45vmax;top:-20vmax;background:radial-gradient(closest-side,rgba(109,74,255,.28),transparent)}
+.after::after{right:-45vmax;bottom:-10vmax;background:radial-gradient(closest-side,rgba(16,181,214,.22),transparent)}
+.sec{position:relative;padding:120px 0 40px}
+.kick{display:block;font:500 13px 'Space Grotesk';letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:14px}
+.sec h2{font:700 clamp(34px,7vw,76px)/1 'Space Grotesk';letter-spacing:-.045em;margin:0 0 16px;background:linear-gradient(100deg,#fff 20%,#a99bff 60%,#5eead4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);max-width:580px;margin:0 0 48px;font-size:19px}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.js .rv.in{opacity:1;transform:none}
+.glass{--mx:50%;--my:0%;--rx:0deg;--ry:0deg;position:relative;border-radius:26px;padding:30px;border:1px solid rgba(255,255,255,.11);background:radial-gradient(340px circle at var(--mx) var(--my),rgba(139,108,255,.3),transparent 60%),rgba(255,255,255,.04);backdrop-filter:blur(16px);overflow:hidden;transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .18s ease-out,opacity .8s}
+.glass h3{font:700 25px/1.15 'Space Grotesk';letter-spacing:-.02em;margin:14px 0 8px}
+.glass p{margin:0;color:#b4b4cc;font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cards .glass:nth-child(2){transition-delay:.1s}.cards .glass:nth-child(3){transition-delay:.2s}
+.cards svg{width:58px;height:58px;color:var(--c)}
+.cards .n{position:absolute;right:22px;top:14px;font:700 64px 'Space Grotesk';color:rgba(255,255,255,.05);letter-spacing:-.05em}
+.cards .pu{transform-box:fill-box;transform-origin:center;animation:pls 2s ease-in-out infinite}
+@keyframes pls{50%{transform:scale(1.5);opacity:.4}}
+@media(max-width:860px){.cards{grid-template-columns:1fr!important}.plans{grid-template-columns:repeat(2,minmax(0,1fr))!important}.plans>.glass:last-child{grid-column:1/-1}}
+@media(max-width:600px){.plans{grid-template-columns:1fr!important}.plans>.glass:last-child{grid-column:auto}}
+
+.strip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 20px 34px;margin:0 -20px;scrollbar-width:thin;scrollbar-color:#3a3a52 transparent}
+.w{flex:none;position:relative;width:min(78vw,310px);height:420px;border-radius:24px;scroll-snap-align:start;overflow:hidden;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .45s cubic-bezier(.2,.9,.3,1.2);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.w:hover{transform:translateY(-12px) rotate(-1.2deg)}
+.w h3{position:relative;z-index:1;margin:0;font-size:40px;line-height:.95}
+.w p{position:relative;z-index:1;margin:8px 0 0;font-size:15px}
+.w1{background:repeating-linear-gradient(-45deg,#c1121f 0 18px,#f4f4f4 18px 36px,#1d3fa6 36px 54px);background-size:76.37px 76.37px;animation:barber 2.4s linear infinite;color:#fff}
+@keyframes barber{to{background-position:76.37px 0}}
+.w1::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(0,0,0,.92))}
+.w1 h3{font:400 62px/.9 'Bebas Neue';letter-spacing:.02em}
+.w2{background:radial-gradient(circle at 30% 20%,#f7edd6,#e6d6b0);color:#2b1d10}
+.w2::before{content:"Σ φ ∞";position:absolute;left:14px;top:10px;font:900 150px/1 Cinzel;color:rgba(80,50,10,.12);white-space:nowrap}
+.w2 h3{font:900 36px/1 Cinzel}
+.w3{background:linear-gradient(160deg,#064e3b,#031f1c);color:#f3d77a}
+.w3::before{content:"";position:absolute;inset:-40px 0;background:radial-gradient(#f3d77a 2px,transparent 3px) 0 0/34px 34px,radial-gradient(#fff 1.5px,transparent 2.5px) 17px 17px/34px 34px;opacity:.35;animation:conf 6s linear infinite}
+@keyframes conf{to{transform:translateY(34px)}}
+.w3 h3{font:700 38px/1 'Space Grotesk';letter-spacing:-.03em}
+.w4{background:radial-gradient(circle at 50% 30%,#3a0000,#050505 70%);color:#ddd}
+.w4::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 9px)}
+.w4 h3{font:700 48px/.95 UnifrakturCook;color:#d10000;text-shadow:0 0 18px rgba(255,0,0,.55);animation:flk 3s infinite steps(1)}
+@keyframes flk{0%,90%,94%{opacity:1;transform:none}92%{opacity:.4;transform:skewX(12deg) translateX(4px)}96%{opacity:.7;transform:skewX(-8deg)}}
+.w5{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:300% 300%;animation:hue 8s ease infinite;color:#fff}
+@keyframes hue{50%{background-position:100% 100%}}
+.w5::before{content:"@";position:absolute;right:8px;top:-30px;font:700 260px/1 'Space Grotesk';color:rgba(255,255,255,.2)}
+.w5 h3{font-weight:700;letter-spacing:-.04em}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.price{font:700 44px 'Space Grotesk';letter-spacing:-.04em;margin:8px 0 4px}
+.price small{font-size:14px;color:#8d8da6;font-weight:400;letter-spacing:0}
+.glass ul{list-style:none;padding:0;margin:16px 0 24px;color:#c9c9dc;font-size:16px}
+.glass li{padding:6px 0 6px 24px;position:relative}
+.glass li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%;background:#5eead4}
+.plans .btn{width:100%;border-radius:16px}
+.hot{padding:0;border:0;background:none;backdrop-filter:none}
+.hot::before{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent 0 55%,#8b6cff,#22d3ee,transparent);animation:spinc 5s linear infinite}
+.hot .in2{position:relative;margin:1.5px;border-radius:25px;padding:30px;background:#0d0d19;height:calc(100% - 3px)}
+@keyframes spinc{to{transform:rotate(360deg)}}
+.pill{display:inline-block;font-size:13px;padding:4px 12px;border-radius:99px;background:linear-gradient(135deg,#8b6cff,#22d3ee);color:#06060c;font-weight:700}
+
+.tk{overflow:hidden;margin:60px 0 0;mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.tk div{display:flex;gap:52px;width:max-content;animation:tk 24s linear infinite;font:700 clamp(28px,5vw,54px) 'Space Grotesk';letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.28)}
+@keyframes tk{to{transform:translateX(-50%)}}
+.cta{text-align:center;padding:130px 0 90px;position:relative}
+.cta h2{font-size:clamp(40px,10vw,128px);line-height:.92}
+.cta p{color:var(--mut);max-width:460px;margin:0 auto 34px}
+.go{min-height:66px;padding:0 46px;font-size:19px;animation:pulseb 2.6s ease-in-out infinite}
+@keyframes pulseb{50%{box-shadow:0 0 90px rgba(34,211,238,.6)}}
+footer{position:relative;padding:28px 20px 100px;text-align:center;font-size:14px;color:#6e6e8c;border-top:1px solid rgba(255,255,255,.06)}
+#wa{position:fixed;z-index:90;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));height:56px;padding:0 24px;display:flex;align-items:center;font:700 15px 'Space Grotesk';text-decoration:none;color:#06060c;border-radius:18px;background:linear-gradient(135deg,#8b6cff,#22d3ee);box-shadow:0 0 34px rgba(139,108,255,.55);transform:translateY(120px);transition:transform .5s cubic-bezier(.2,.9,.3,1.2)}
+#wa.s{transform:none}
+
+
+/* ===== identidade Traço Digital + laboratório ===== */
+
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.process-step{padding:25px 24px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.025)}.process-step>span{font:700 13px 'Space Grotesk';color:var(--c);letter-spacing:.12em}.process-step h3{font-size:24px;margin:22px 0 8px;letter-spacing:-.04em}.process-step p{margin:0;color:#aaa9bd;font-size:15px;line-height:1.6}
+@media(max-width:760px){.process-grid{grid-template-columns:1fr}}
+
+:root{--bg:#080910;--fg:#f3f2fa;--mut:#a5a4b8;--v:#9a7cff;--c:#62e8e0;--p:#ff6f9e}
+.logo{letter-spacing:-.045em}.logo i{width:15px;height:15px;border-radius:3px;transform:rotate(45deg)}
+#intro{background:radial-gradient(ellipse at 50% 72%,rgba(111,77,220,.22),transparent 52%),#080910}
+#intro::before{background:repeating-linear-gradient(0deg,rgba(137,125,255,.035) 0 1px,transparent 1px 4px)}
+#intro .grid{background:linear-gradient(rgba(139,124,255,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(139,124,255,.2) 1px,transparent 1px)}
+#term{color:#8ff7e7;text-shadow:0 0 12px rgba(98,232,224,.4)}
+.gt{font-size:clamp(42px,9.2vw,124px);letter-spacing:-.065em}
+.gt::before{color:#62e8e0}.gt::after{color:#9a7cff}
+.sub{color:#c1bfd2;line-height:1.55}
+.cue{color:#9b91ff}.cue::after{background:linear-gradient(#9b91ff,transparent)}
+.kick{color:var(--c)}
+#mundos .lead{max-width:720px}
+.concept-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.concept{grid-column:span 2;position:relative;display:flex;flex-direction:column;text-align:left;min-width:0;padding:0;border:1px solid rgba(255,255,255,.13);border-radius:22px;overflow:hidden;background:#11121d;color:#f5f4fb;cursor:pointer;min-height:390px;transition:transform .35s,border-color .35s,box-shadow .35s}
+.concept:nth-child(4){grid-column:2/span 2}.concept:nth-child(5){grid-column:4/span 2}
+.concept:hover{transform:translateY(-8px);border-color:rgba(98,232,224,.55);box-shadow:0 24px 70px rgba(0,0,0,.35),0 0 35px rgba(154,124,255,.12)}
+.concept:focus-visible{outline:2px solid var(--c);outline-offset:4px}
+.concept-tag{position:absolute;z-index:2;left:17px;top:16px;font:11px 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.concept-art{height:245px;display:flex;position:relative;overflow:hidden;align-items:center;justify-content:center;padding:24px}
+.concept-copy{display:flex;flex-direction:column;gap:5px;padding:17px 19px 20px}
+.concept-copy b{font-size:20px;letter-spacing:-.04em}.concept-copy small{font-size:12px;color:#a8a7ba}.concept-open{margin-top:12px;color:#8deee3;font-size:13px;font-weight:700}
+.art-lux{background:#d9d0c2;color:#28251f;gap:10px}.art-lux i{display:block;width:29%;height:76%;background:linear-gradient(145deg,#c6b9a6,#71695d)}.art-lux i:nth-child(2){height:90%;background:linear-gradient(145deg,#e8dfd2,#a79b89)}.art-lux i:nth-child(3){height:62%;background:linear-gradient(145deg,#b7a58e,#5b5145)}
+.art-brut{background:#e6ff39;color:#111;justify-content:space-between}.art-brut b{font:900 clamp(38px,5vw,65px)/.78 Arial;letter-spacing:-.1em}.art-brut i{font-style:normal;font-size:48px;align-self:flex-end}
+.art-com{background:linear-gradient(140deg,#122d56,#2572a5);color:white;align-items:flex-start;flex-direction:column}.art-com b{font-size:clamp(24px,3vw,39px);line-height:.95;letter-spacing:-.06em}.art-com i{font-style:normal;background:#c8f56e;color:#142b21;padding:10px 13px;margin-top:16px;font-size:11px;font-weight:700}
+.art-edit{background:#e8e0d3;color:#29231c;align-items:flex-start;flex-direction:column}.art-edit small{font:10px Arial;letter-spacing:.2em}.art-edit b{font:clamp(36px,5vw,58px)/.83 Georgia;letter-spacing:-.07em;margin-top:20px}.art-edit i{position:absolute;width:86px;height:86px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f8d8a8,#98563c 70%);right:28px;bottom:24px}
+.art-tech{background:radial-gradient(circle at 70% 30%,#4831a0,#101326 65%);color:white;align-items:flex-start;flex-direction:column}.art-tech:before,.art-tech:after{content:"";position:absolute;width:160px;height:160px;border:1px solid rgba(98,232,224,.7);border-radius:50%;right:-25px;top:15px;box-shadow:0 0 35px rgba(98,232,224,.2)}.art-tech:after{transform:rotateX(65deg) rotate(45deg)}.art-tech b{position:relative;z-index:1;font-size:clamp(28px,4vw,48px);line-height:.88;letter-spacing:-.08em}.art-tech small{position:relative;z-index:1;margin-top:15px;color:#8ff7e7;font-size:9px;letter-spacing:.2em}
+.demo-note{margin-top:22px;color:#a6a4ba;font-size:13px}.demo-note span{color:var(--c);margin-right:8px}
+.demo-modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:22px}.demo-modal.open{display:flex}.demo-backdrop{position:absolute;inset:0;background:rgba(2,3,9,.82);backdrop-filter:blur(12px)}.demo-panel{position:relative;z-index:1;width:min(1050px,100%);height:min(850px,92svh);display:flex;flex-direction:column;background:#10111b;border:1px solid rgba(255,255,255,.16);border-radius:22px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.65)}.demo-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;gap:20px}.demo-head .kick{font-size:10px;margin:0 0 3px}.demo-head h3{font-size:19px;margin:0}.demo-close{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:white;font-size:27px;cursor:pointer}.demo-panel iframe{width:100%;flex:1;min-height:0;border:0;background:#f0eee8}.demo-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 18px;color:#aaa9bd;font-size:12px}.demo-foot .btn{min-height:42px;padding:0 18px;font-size:13px;white-space:nowrap}
+.plan-index{display:block;color:#8deee3;font:11px 'Space Grotesk';letter-spacing:.15em;margin-bottom:13px}.plan-desc{color:#b9b8ca!important;min-height:48px}.price{font-size:clamp(42px,5vw,56px)}.pricing-foot{margin:24px 0 0;color:#9291a6;font-size:13px;max-width:800px;line-height:1.6}.plans .hot .in2{background:#111321}.plans .hot{transform:translateY(-8px)}
+.cta h2{font-size:clamp(44px,9vw,112px);letter-spacing:-.07em}.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.cta-actions .btn{margin-top:0}.cta .gh{color:white}
+footer{padding:48px 20px 110px}.footer-brand{font-size:22px;font-weight:700;letter-spacing:-.05em;text-decoration:none;color:#f4f2ff}.footer-brand span{color:var(--c);margin-left:7px}.footer-brand+p{margin:4px 0 8px;color:#aaa9bd}.footer-links{display:flex;justify-content:center;gap:22px;margin-top:17px}.footer-links a{color:#8deee3;text-decoration:none;font-size:13px}
+@media(max-width:760px){.concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.concept,.concept:nth-child(4),.concept:nth-child(5){grid-column:auto}.concept:last-child{grid-column:1/-1}.concept{min-height:350px}.concept-art{height:210px}.plans .hot{transform:none}.demo-modal{padding:8px}.demo-panel{height:94svh;border-radius:16px}.demo-foot{align-items:flex-start;flex-direction:column}.demo-foot .btn{width:100%}}
+@media(max-width:480px){.concept-grid{grid-template-columns:1fr}.concept,.concept:last-child{grid-column:auto;min-height:340px}.concept-art{height:220px}.demo-foot{font-size:11px}.demo-head{padding:10px 14px}}
+
+
+/* ===== apresentação pessoal ===== */
+.about{padding-top:clamp(76px,10vw,140px);padding-bottom:clamp(76px,10vw,140px);overflow:hidden}
+.about-wrap{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(34px,7vw,92px)}
+.about-photo{position:relative;min-width:0;max-width:470px;margin-inline:auto;width:100%;isolation:isolate}
+.about-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(98,232,224,.48);border-radius:4px;z-index:-1}
+.about-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,6,12,.78));pointer-events:none}
+.about-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 32%;filter:grayscale(1) contrast(1.08);border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.42)}
+.photo-caption{position:absolute;z-index:1;left:20px;bottom:18px;font:11px 'Space Grotesk';letter-spacing:.2em;color:#fff}
+.about-copy{min-width:0}.about-copy h2{max-width:720px;font-size:clamp(38px,5.4vw,70px);line-height:.98;letter-spacing:-.065em;margin:16px 0 24px}
+.about-intro{font-size:clamp(18px,2vw,23px);line-height:1.5;color:#f0eff8;max-width:680px;margin:0 0 18px}
+.about-body{max-width:650px;color:#aaa9bd;font-size:16px;line-height:1.8;margin:0}
+.about-values{display:flex;flex-wrap:wrap;gap:10px 22px;margin:28px 0 30px}
+.about-values span{font-size:13px;color:#d9d7e7;display:flex;align-items:center;gap:8px}
+.about-values b{font-size:11px;color:var(--c);letter-spacing:.08em}
+.about-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.about-actions .btn{min-height:50px;padding-inline:24px}
+.about-insta{font-size:14px;color:#c7c4dc;text-decoration:none;border-bottom:1px solid rgba(98,232,224,.55);padding:7px 0}
+.about-insta:hover{color:var(--c)}
+.about-contact{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.about-contact span{font-size:10px;letter-spacing:.17em;color:#85849c}
+.about-contact a{font-size:14px;color:var(--c);text-decoration:none;font-variant-numeric:tabular-nums}
+@media(max-width:760px){.about-wrap{grid-template-columns:1fr;gap:44px}.about-photo{max-width:390px;width:min(100%,390px)}.about-copy h2{max-width:600px}.about-values{gap:12px 18px}}
+@media(max-width:480px){.about{padding-block:72px}.about-photo{width:calc(100% - 14px)}.about-photo::before{inset:12px -12px -12px 12px}.about-intro{font-size:18px}.about-body{font-size:15px}.about-actions{align-items:stretch;flex-direction:column;gap:14px}.about-actions .btn{width:100%}.about-insta{text-align:center;align-self:center}.about-contact{gap:8px;flex-direction:column;align-items:flex-start}}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv,.js #intro .rise{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="cur"><i></i></div>
+<div id="prog"></div>
+<header><div class="wrap hb"><a class="logo" href="#intro"><i></i>Traço Digital</a>
+<nav class="m"><a href="#tempo">A evolução</a><a href="#oficio">O que faço</a><a href="#processo">Processo</a><a href="#sobre">Sobre mim</a><a href="#mundos">Laboratório</a><a href="#planos">Preços</a><a class="btn mag" data-wa="Olá! Vim pelo seu site e quero encomendar um site." href="#">WhatsApp</a></nav></div></header>
+
+<main>
+<section id="intro">
+<div class="grid"></div>
+<div class="wrap">
+<div id="term" aria-hidden="true"></div>
+<h1 class="gt rise" data-t="Ideias ganham&#10;forma na web.">Ideias ganham<br>forma na web.</h1>
+<p class="sub rise r2">Crio páginas e experiências digitais com personalidade, clareza e propósito. Atravesse a evolução da web e descubra o que uma boa ideia pode se tornar.</p>
+<a class="btn mag rise r3" href="#tempo">Explorar a experiência</a>
+</div>
+<div class="cue">role</div>
+</section>
+
+<section id="tempo" aria-label="Linha do tempo da web">
+<p class="sr">Uma experiência conceitual que percorre cinco momentos da web: 1995, páginas artesanais; 2001, animações e relevo; 2009, Web 2.0; 2015, design responsivo; e a web contemporânea, com movimento e interação.</p>
+<div class="stage" id="stage">
+<div class="hud"><div class="wrap"><div class="yr" id="yr">1995</div>
+<div class="hm" id="hm"><h2></h2><p></p><div class="chips"></div></div></div></div>
+
+<div class="win" id="win" data-e="0">
+<div class="bar" id="wbar"><div class="dots"><i></i><i></i><i></i></div><div class="bt"><span>‹</span><span>›</span><span>↻</span></div><div class="url" id="url"></div></div>
+<div class="view" id="view">
+
+<div class="pgw on" aria-hidden="true" style="background:#c0c0c0"><div class="pg p1">
+<div class="mq"><span>*** Bem-vindo à minha homepage! *** Você é o visitante número 142 *** Assine o livro de visitas! ***</span></div>
+<div class="h">Bem-vindo à Página do Meu Negócio!!!</div><hr>
+<div class="two"><div><p>Olá, internauta! Esta página foi feita no <b>Bloco de Notas</b>.</p><ul><li><a>Nossos produtos</a></li><li><a>Livro de visitas</a></li><li><a>Fale conosco por e-mail</a></li><li><a class="vis">Links amigos</a></li></ul></div><div class="uc"><b>EM CONSTRUÇÃO</b></div></div><hr>
+<p class="sm">Você é o visitante número <span class="ctr">000142</span> <span class="bl">NOVO!</span></p>
+<p class="sm">Melhor visualizado no Netscape Navigator 2.0 · 640×480 · Atualizado em 12/03/1995</p>
+</div></div>
+
+<div class="pgw" aria-hidden="true" style="background:#07112e"><div class="pg p2">
+<div class="star">NOVO!</div><i class="sp" style="left:60px;top:70px"></i><i class="sp" style="left:130px;top:250px;animation-delay:-.6s"></i><i class="sp" style="right:90px;top:300px;animation-delay:-1.1s"></i>
+<div class="lg">MEU NEGÓCIO</div><div class="sb2">:: o site mais radical da internet ::</div>
+<nav><b>HOME</b><b>PRODUTOS</b><b>GALERIA</b><b>CONTATO</b></nav>
+<div>Carregando intro em Flash...</div><div class="ld"><i></i></div><div class="sk">[ pular intro ]</div>
+<div class="ft">Requer Flash Player 5 · Resolução ideal 800×600 · Você é o visitante 12.847</div>
+</div></div>
+
+<div class="pgw" aria-hidden="true" style="background:#fff"><div class="pg p3">
+<div class="rib">BETA</div>
+<div class="top"><div class="brand">MeuNegócio</div><div class="nv"><b>Início</b><b>Serviços</b><b>Blog</b><b>Contato</b></div></div>
+<div class="hero"><div class="big">O jeito mais fácil<br>de vender online</div><div class="st">★★★★★ <span style="font-size:13px;color:#567;letter-spacing:0">destaque visual da época</span></div><span class="gb">Experimente grátis!</span></div>
+<div class="fs"><div class="fb"><span class="ic"></span><b>Simples</b></div><div class="fb"><span class="ic"></span><b>Rápido</b></div><div class="fb"><span class="ic"></span><b>Compartilhe</b></div></div>
+</div></div>
+
+<div class="pgw" aria-hidden="true" style="background:#fff"><div class="pg p4" id="p4">
+<div class="nav"><div class="lo">Meu<span>Negócio</span></div><div class="hb2"></div></div>
+<div class="hero"><i class="sh s1"></i><i class="sh s2"></i><i class="sh s3"></i><div><h4>Simples.<br>Rápido. Seu.</h4><p>Design limpo que se adapta a qualquer tela, do celular à TV.</p><span class="fbn">COMEÇAR AGORA</span></div></div>
+<div class="cs"><div class="cd"><i></i>Responsivo</div><div class="cd"><i></i>Leve</div><div class="cd"><i></i>Limpo</div></div>
+</div></div>
+
+<div class="pgw fl" id="pg5"><div class="p5">
+<div class="aur"><i></i><i></i><i></i></div><canvas id="cv"></canvas>
+<div class="in"><span class="pl"><u></u>site vivo · mexa o cursor</span>
+<div class="big" id="big">Seu site,<br>vivo.</div>
+<p class="sb">Movimento, vidro, luz e velocidade. Feito à mão, sob medida para o seu negócio.</p>
+<div class="rw"><a class="btn mag" data-wa="Olá! Quero um site feito sob medida." href="#">Quero o meu site</a><a class="btn gh" href="#planos">Ver planos</a></div></div>
+<span class="fc f1">movimento fluido</span><span class="fc f2">pensado para celular</span><span class="fc f3">feito sob medida</span>
+<div class="dn">role ↓</div>
+</div></div>
+
+<div class="sw2"></div>
+</div></div>
+
+<div class="rail"><div class="rl"><div class="tr"><i id="fill"></i></div>
+<button class="rb" type="button">1995</button><button class="rb" type="button">2001</button><button class="rb" type="button">2009</button><button class="rb" type="button">2015</button><button class="rb" type="button">Hoje</button></div></div>
+</div>
+</section>
+
+<div class="after">
+<section class="sec" id="oficio"><div class="wrap">
+<span class="kick rv">O que fazemos</span><h2 data-scr>Uma presença digital com intenção.</h2>
+<p class="lead rv">Do primeiro contato à publicação, a proposta é transformar sua ideia em uma página clara, atraente e fácil de usar. O formato depende do que seu negócio precisa.</p>
+<div class="cards">
+<div class="glass tilt rv"><span class="n">01</span>
+<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="18" y="5" width="28" height="54" rx="7"/><circle class="pu" cx="32" cy="46" r="4" fill="currentColor"/><path d="M25 16h14M25 23h9"/></svg>
+<h3>Landing pages</h3><p>Páginas objetivas para apresentar um serviço, produto ou profissional e facilitar o contato pelo WhatsApp.</p></div>
+<div class="glass tilt rv"><span class="n">02</span>
+<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M32 8 58 22 32 36 6 22Z"/><path d="M6 32l26 14 26-14"/><path d="M6 42l26 14 26-14"/></svg>
+<h3>Sites institucionais</h3><p>Uma presença digital organizada para explicar o que você faz, mostrar seus diferenciais e orientar o próximo passo.</p></div>
+<div class="glass tilt rv"><span class="n">03</span>
+<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="32" cy="12" r="6"/><circle cx="12" cy="48" r="6"/><circle cx="52" cy="48" r="6"/><path d="M29 17 15 43M35 17l14 26M18 50h28"/></svg>
+<h3>Experiências personalizadas</h3><p>Interações, recursos visuais e soluções sob medida para projetos que precisam ir além do básico.</p></div>
+</div></div></section>
+
+
+<section class="sec process" id="processo"><div class="wrap">
+<span class="kick rv">Como funciona</span><h2 data-scr>Da conversa à página no ar.</h2>
+<p class="lead rv">Um processo simples, com escopo alinhado antes da criação.</p>
+<div class="process-grid">
+<div class="process-step rv"><span>01</span><h3>Entender</h3><p>Você conta sobre o negócio, o público e o que espera que a página faça.</p></div>
+<div class="process-step rv"><span>02</span><h3>Desenhar</h3><p>Definimos a estrutura, o estilo visual e os conteúdos necessários para o projeto.</p></div>
+<div class="process-step rv"><span>03</span><h3>Construir</h3><p>A página é criada, revisada e preparada para funcionar em telas diferentes.</p></div>
+</div>
+</div></section>
+
+<section class="sec about" id="sobre"><div class="wrap about-wrap">
+<div class="about-photo rv"><img src="perto_e_branco_ia.jpg" alt="Retrato em preto e branco do criador da Traço Digital, usando terno" loading="lazy"><span class="photo-caption">TRAÇO DIGITAL · QUEM CRIA</span></div>
+<div class="about-copy">
+<span class="kick rv">Por trás de cada página</span>
+<h2 data-scr>Prazer, sou o criador da Traço Digital.</h2>
+<p class="about-intro rv">Acredito que todo negócio tem algo único para mostrar — e que um bom site pode transformar essa ideia em uma presença digital clara, bonita e profissional.</p>
+<p class="about-body rv">Meu trabalho é entender o que você precisa comunicar e construir uma página que combine com a identidade do seu projeto. Cuido da estrutura, do visual e da experiência em diferentes telas, com atenção aos detalhes e conversa direta durante o processo.</p>
+<div class="about-values rv"><span><b>01</b> Atendimento direto</span><span><b>02</b> Design com propósito</span><span><b>03</b> Experiência responsiva</span></div>
+<div class="about-actions rv"><a class="btn mag" data-wa="Olá! Conheci sua apresentação na Traço Digital e quero conversar sobre meu projeto." href="#">Vamos conversar</a><a class="about-insta" href="https://www.instagram.com/el_peladeiros/" target="_blank" rel="noopener">Acompanhar no Instagram ↗</a></div>
+<div class="about-contact rv"><span>CONTATO DIRETO</span><a data-wa="Olá! Vim pelo site da Traço Digital e gostaria de conversar." href="#">+55 (98) 9 8121-3280</a></div>
+</div></div></section>
+
+<section class="sec" id="mundos"><div class="wrap">
+<span class="kick rv">Laboratório de possibilidades</span><h2 data-scr>Um estilo para cada ideia.</h2>
+<p class="lead rv">Explore estudos visuais fictícios criados para demonstrar diferentes direções criativas. Não são trabalhos de clientes: são conceitos para você imaginar o que podemos construir juntos.</p>
+<div class="concept-grid rv" aria-label="Demonstrações conceituais de estilos de sites">
+<button class="concept concept-1" type="button" data-demo="luxo"><span class="concept-tag">01 / Minimalismo</span><span class="concept-art art-lux"><i></i><i></i><i></i></span><span class="concept-copy"><b>Casa Avelã</b><small>Conceito fictício · marca de interiores</small><span class="concept-open">Explorar conceito ↗</span></span></button>
+<button class="concept concept-2" type="button" data-demo="brutal"><span class="concept-tag">02 / Brutalismo</span><span class="concept-art art-brut"><b>FORMA<br>SEM<br>FREIO.</b><i>↗</i></span><span class="concept-copy"><b>Fora da Linha</b><small>Conceito fictício · estúdio criativo</small><span class="concept-open">Explorar conceito ↗</span></span></button>
+<button class="concept concept-3" type="button" data-demo="comercial"><span class="concept-tag">03 / Conversão</span><span class="concept-art art-com"><b>SEU PRÓXIMO<br>PASSO COMEÇA<br>AQUI.</b><i>Quero conhecer</i></span><span class="concept-copy"><b>Vértice Consultoria</b><small>Conceito fictício · serviço profissional</small><span class="concept-open">Explorar conceito ↗</span></span></button>
+<button class="concept concept-4" type="button" data-demo="editorial"><span class="concept-tag">04 / Editorial</span><span class="concept-art art-edit"><small>REVISTA / 026</small><b>O TEMPO<br>É MATÉRIA.</b><i></i></span><span class="concept-copy"><b>Entrelinhas</b><small>Conceito fictício · revista cultural</small><span class="concept-open">Explorar conceito ↗</span></span></button>
+<button class="concept concept-5" type="button" data-demo="tech"><span class="concept-tag">05 / Futurista</span><span class="concept-art art-tech"><i></i><b>BEYOND<br>THE PIXEL</b><small>EXPERIÊNCIAS DIGITAIS</small></span><span class="concept-copy"><b>Órbita Lab</b><small>Conceito fictício · tecnologia</small><span class="concept-open">Explorar conceito ↗</span></span></button>
+</div>
+<div class="demo-note rv"><span>✳</span> São demonstrações de direção visual. Conteúdo, nomes e marcas são ilustrativos.</div>
+</div></section>
+<div class="demo-modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+<div class="demo-backdrop" data-close-demo></div><div class="demo-panel"><div class="demo-head"><div><span class="kick">Laboratório / demonstração</span><h3 id="demoTitle">Conceito</h3></div><button type="button" class="demo-close" aria-label="Fechar demonstração" data-close-demo>×</button></div><iframe id="demoFrame" title="Prévia de demonstração conceitual" loading="lazy"></iframe><div class="demo-foot"><span>Projeto conceitual fictício · demonstração visual</span><a class="btn mag" data-wa="Olá! Explorei o Laboratório de possibilidades e quero conversar sobre um site." href="#">Quero algo assim</a></div></div>
+</div>
+<section class="sec" id="planos"><div class="wrap">
+<span class="kick rv">Investimento inicial</span><h2 data-scr>Comece pelo essencial.</h2>
+<p class="lead rv">Preços de entrada para tirar sua presença digital do papel. O escopo é combinado antes de começar, sem surpresas.</p>
+<div class="plans">
+<div class="glass tilt rv"><span class="plan-index">01 / ESSENCIAL</span><h3>Começo</h3><div class="price">R$ 50</div><p class="plan-desc">Para quem precisa de uma página simples e direta.</p><ul><li>Landing page de uma página</li><li>Apresentação objetiva do serviço</li><li>Botão de contato pelo WhatsApp</li><li>Adaptação para celular</li></ul><a class="btn mag" data-wa="Olá! Tenho interesse na landing page Começo de R$ 50. Quero entender o escopo." href="#">Quero começar</a></div>
+<div class="glass hot tilt rv"><div class="in2"><span class="pill">Mais possibilidades</span><span class="plan-index">02 / COMPLETO</span><h3>Presença</h3><div class="price">R$ 100</div><p class="plan-desc">Para apresentar melhor seu negócio e seus serviços.</p><ul><li>Tudo do plano Começo</li><li>Mais seções e conteúdo organizado</li><li>Área de serviços ou diferenciais</li><li>Identidade visual mais trabalhada</li><li>Adaptação para celular</li></ul><a class="btn mag" data-wa="Olá! Tenho interesse na landing page Presença de R$ 100. Quero entender o escopo." href="#">Quero evoluir</a></div></div>
+<div class="glass tilt rv"><span class="plan-index">03 / PERSONALIZADO</span><h3>Expressão</h3><div class="price">R$ 150</div><p class="plan-desc">Para quem quer uma página com mais personalidade e movimento.</p><ul><li>Tudo do plano Presença</li><li>Animações e interações selecionadas</li><li>Composição visual personalizada</li><li>Mais cuidado nos detalhes da experiência</li><li>Adaptação para celular</li></ul><a class="btn mag" data-wa="Olá! Tenho interesse na landing page Expressão de R$ 150. Quero entender o escopo." href="#">Quero personalizar</a></div>
+</div>
+<p class="pricing-foot rv">Os valores são de criação e consideram o escopo descrito. Domínio, hospedagem, ferramentas pagas, produção de textos/fotos e recursos extras não estão incluídos; se forem necessários, serão combinados e orçados antes.</p>
+<div class="tk" aria-hidden="true"><div><span>IDEIA</span><span>DESIGN</span><span>CLAREZA</span><span>WEB</span><span>EXPERIÊNCIA</span><span>CONEXÃO</span><span>IDEIA</span><span>DESIGN</span><span>CLAREZA</span><span>WEB</span><span>EXPERIÊNCIA</span><span>CONEXÃO</span></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+<span class="kick rv">Seu projeto começa com uma conversa</span><h2 data-scr>Vamos dar forma<br>à sua ideia?</h2>
+<p class="rv">Explique o que você precisa. A gente conversa sobre o objetivo, escolhe o formato e define o escopo antes de começar.</p>
+<div class="cta-actions"><a class="btn go mag rv" data-wa="Olá! Vim pelo site da Traço Digital e quero conversar sobre a criação de uma landing page." href="#">Conversar pelo WhatsApp</a><a class="btn gh rv" href="https://www.instagram.com/el_peladeiros/" target="_blank" rel="noopener">Instagram ↗</a></div>
+</div></section>
+</div>
+</main>
+<footer><a class="footer-brand" href="#intro">Traço Digital<span>✳</span></a><p>Ideias ganham forma na web.</p><small>Criação digital independente · São Luís, Maranhão</small><div class="footer-links"><a href="https://www.instagram.com/el_peladeiros/" target="_blank" rel="noopener">Instagram</a><a data-wa="Olá! Vim pelo site da Traço Digital e quero conversar sobre um projeto." href="#">WhatsApp</a></div></footer>
+<a id="wa" data-wa="Olá! Vim pelo seu site e quero encomendar um site." href="#">Chamar no WhatsApp</a>
+
+<script>
+// Troque pelo seu número, com DDI e DDD, só dígitos (ex.: 5598999999999)
+var NUMERO="5598981213280";
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+$$("[data-wa]").forEach(function(a){a.href="https://wa.me/"+NUMERO+"?text="+encodeURIComponent(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+
+/* intro: terminal digitando */
+var tm=$("#term"),intro=$("#intro"),LN=["> iniciando Traço Digital ...","> explorando ideias, formas e possibilidades.","> role a página para atravessar a evolução da web."];
+async function typeIt(){for(var i=0;i<LN.length;i++){var d=document.createElement("div");tm.appendChild(d);for(var j=0;j<LN[i].length;j++){d.textContent+=LN[i][j];await sleep(RM?0:26)}await sleep(RM?0:240)}intro.classList.add("ready")}
+typeIt().catch(function(){intro.classList.add("ready")});setTimeout(function(){intro.classList.add("ready")},6500);
+
+/* embaralhar texto */
+var G="▓▒░<>/\\{}[]#$%&*+=?_";
+function scr(el){if(RM)return;var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),ns=[],n;while(n=w.nextNode())ns.push([n,n.nodeValue]);var st=performance.now();
+(function f(now){var t=Math.min(1,(now-st)/900);ns.forEach(function(x){x[0].nodeValue=x[1].replace(/\S/g,function(c,i){return i<x[1].length*t*1.15?c:G[Math.random()*G.length|0]})});if(t<1)requestAnimationFrame(f)})(st)}
+
+/* a viagem */
+var Y=[1995,2001,2009,2015,2026],COL=["#00ff66","#38b6ff","#ffb000","#ff5a4f","#8b6cff"];
+var URLS=["http://www.meunegocio.com.br/index.htm","http://www.meunegocio.com.br/entrar.html","http://meunegocio.com.br/","https://meunegocio.com.br","https://meunegocio.com.br/hoje"];
+var HD=[
+{n:"A web artesanal",d:"Texto, links azuis, tabelas e um contador de visitas. Cada página era feita à mão, no Bloco de Notas.",t:["HTML","<table>","GIF","<marquee>"]},
+{n:"Flash e relevo",d:"Menus com efeito 3D, introduções animadas e tudo diagramado em 800×600.",t:["Flash","Frames","JavaScript","800×600"]},
+{n:"A era Web 2.0",d:"Brilho, reflexo e cantos arredondados. O CSS3 passa a desenhar no lugar das imagens.",t:["CSS3","jQuery","AJAX","Gradientes"]},
+{n:"Flat e responsivo",d:"Cores chapadas, grades flexíveis e uma página que se adapta a qualquer tela.",t:["Flexbox","Media queries","SVG","Mobile first"]},
+{n:"Hoje: o site é vivo",d:"Animação a 60 fps, interação com o cursor, canvas, vidro e luz. O site responde a você.",t:["CSS moderno","Canvas","JavaScript","Scroll animado"]}];
+var tempo=$("#tempo"),stage=$("#stage"),win=$("#win"),view=$("#view"),wbar=$("#wbar"),url=$("#url"),yr=$("#yr"),hm=$("#hm"),hud=$(".hud"),rail=$(".rail"),fill=$("#fill"),p4=$("#p4"),pgs=$$(".pgw"),rbs=$$(".rb");
+var cur=-1,yv=Y[0],yt,gt;
+function tweenYear(to){cancelAnimationFrame(yt);var from=yv,st=performance.now(),d=RM?1:950;(function f(n){var t=Math.min(1,(n-st)/d),e=1-Math.pow(1-t,3);yv=Math.round(from+(to-from)*e);yr.textContent=yv;if(t<1)yt=requestAnimationFrame(f)})(st)}
+function setEra(i){
+ if(i===cur)return;var prev=cur;cur=i;
+ pgs.forEach(function(p,k){p.classList.toggle("on",k===i)});
+ win.dataset.e=i;stage.style.setProperty("--gl",COL[i]);url.textContent=URLS[i];
+ rbs.forEach(function(b,k){b.classList.toggle("on",k===i)});
+ var h=HD[i];hm.querySelector("h2").textContent=h.n;hm.querySelector("p").textContent=h.d;
+ hm.querySelector(".chips").innerHTML=h.t.map(function(x){return "<b></b>"}).join("");
+ hm.querySelectorAll(".chips b").forEach(function(b,k){b.textContent=h.t[k]});
+ hm.classList.remove("sw");void hm.offsetWidth;hm.classList.add("sw");
+ if(prev>=0&&!RM){win.classList.remove("gl");void win.offsetWidth;win.classList.add("gl");clearTimeout(gt);gt=setTimeout(function(){win.classList.remove("gl")},650)}
+ tweenYear(Y[i]);
+ if(i===4){scr($("#big"));run=true;loop()}else run=false;
+}
+rbs.forEach(function(b,k){b.addEventListener("click",function(){scrollTo({top:tempo.offsetTop+((k+.06)/5.2)*(tempo.offsetHeight-innerHeight),behavior:"smooth"})})});
+
+function clamp(v,a,b){return Math.min(b,Math.max(a,v))}
+var wa=$("#wa"),prog=$("#prog"),tick=false;
+function upd(){
+ tick=false;
+ var vw=innerWidth,vh=innerHeight,rng=tempo.offsetHeight-vh;
+ var s=clamp((scrollY-tempo.offsetTop)/rng,0,1),p=s*5.2,idx=Math.min(4,Math.floor(p)),t=p-idx;
+ setEra(idx);
+ var e0=clamp((p-4.12)/.9,0,1),e=e0*e0*(3-2*e0);
+ var mob=vw<700,tp=mob?132:232,bp=74,bw=Math.min(920,vw-24),bh=Math.max(280,Math.min(620,vh-tp-bp));
+ var w=bw+(vw-bw)*e,h=bh+(vh-bh)*e;
+ win.style.width=w+"px";win.style.height=h+"px";win.style.left=(vw/2)+"px";win.style.top=(tp*(1-e))+"px";
+ win.style.borderRadius=(idx===4?16*(1-e):null)==null?"":(16*(1-e))+"px";
+ var b0=42*(1-e);wbar.style.height=b0+"px";wbar.style.opacity=clamp(1-e*1.6,0,1);
+ hud.style.opacity=clamp(1-e*3,0,1);rail.style.opacity=clamp(1-e*3,0,1);rail.style.pointerEvents=e>.3?"none":"";
+ view.style.setProperty("--k",Math.min(w/880,(h-b0)/520).toFixed(4));
+ fill.style.width=(Math.min(p,4)/4*100)+"%";
+ p4.style.setProperty("--t",idx===3?t.toFixed(3):0);
+ prog.style.transform="scaleX("+clamp(scrollY/(document.documentElement.scrollHeight-vh),0,1)+")";
+ wa.classList.toggle("s",scrollY>vh*.7);
+}
+function req(){if(!tick){tick=true;requestAnimationFrame(upd)}}
+addEventListener("scroll",req,{passive:true});addEventListener("resize",req);
+
+/* partículas da era atual */
+var cv=$("#cv"),cx=cv.getContext("2d"),W=0,H=0,pts=[],mx=-999,my=-999,run=false,looping=false;
+function size(){var d=Math.min(2,devicePixelRatio||1);W=cv.clientWidth;H=cv.clientHeight;if(!W||!H)return;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);var n=Math.round(Math.min(120,W*H/9000));while(pts.length<n)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5});pts.length=n}
+if("ResizeObserver" in window){new ResizeObserver(size).observe(cv)}else{addEventListener("resize",size);size()}
+addEventListener("pointermove",function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top},{passive:true});
+function draw(){
+ cx.clearRect(0,0,W,H);
+ for(var i=0;i<pts.length;i++){var a=pts[i];
+  if(!RM){var dx=a.x-mx,dy=a.y-my,d2=dx*dx+dy*dy;if(d2<19600&&d2>1){var d=Math.sqrt(d2),f=(140-d)/140*.5;a.vx+=dx/d*f;a.vy+=dy/d*f}
+  a.vx*=.985;a.vy*=.985;if(Math.abs(a.vx)+Math.abs(a.vy)<.15){a.vx+=(Math.random()-.5)*.04;a.vy+=(Math.random()-.5)*.04}
+  a.x+=a.vx;a.y+=a.vy;if(a.x<0)a.x=W;if(a.x>W)a.x=0;if(a.y<0)a.y=H;if(a.y>H)a.y=0}
+  for(var j=i+1;j<pts.length;j++){var b=pts[j],ex=a.x-b.x,ey=a.y-b.y,q=ex*ex+ey*ey;if(q<12100){cx.strokeStyle="rgba(139,108,255,"+(1-q/12100)*.55+")";cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+  var mdx=a.x-mx,mdy=a.y-my,mq=mdx*mdx+mdy*mdy;if(mq<24000){cx.strokeStyle="rgba(34,211,238,"+(1-mq/24000)*.8+")";cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mx,my);cx.stroke()}
+  cx.fillStyle="#d8d2ff";cx.beginPath();cx.arc(a.x,a.y,1.7,0,6.283);cx.fill()}
+}
+function loop(){if(looping)return;looping=true;(function f(){if(!run){looping=false;return}draw();requestAnimationFrame(f)})()}
+
+/* revelar ao rolar */
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;x.target.classList.add("in");if(x.target.hasAttribute("data-scr"))scr(x.target);io.unobserve(x.target)})},{threshold:.2});$$(".rv,[data-scr]").forEach(function(el){io.observe(el)})}else{$$(".rv").forEach(function(el){el.classList.add("in")})}
+
+/* tilt 3D e brilho */
+$$(".tilt").forEach(function(g){
+ g.addEventListener("pointermove",function(e){var r=g.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;g.style.setProperty("--mx",x+"px");g.style.setProperty("--my",y+"px");if(e.pointerType==="mouse"){g.style.setProperty("--ry",((x/r.width-.5)*10).toFixed(2)+"deg");g.style.setProperty("--rx",((.5-y/r.height)*10).toFixed(2)+"deg")}});
+ g.addEventListener("pointerleave",function(){g.style.setProperty("--rx","0deg");g.style.setProperty("--ry","0deg")})});
+/* botões magnéticos */
+$$(".mag").forEach(function(b){
+ b.addEventListener("pointermove",function(e){if(e.pointerType!=="mouse")return;var r=b.getBoundingClientRect();b.style.transform="translate("+(e.clientX-r.left-r.width/2)*.22+"px,"+(e.clientY-r.top-r.height/2)*.3+"px)"});
+ b.addEventListener("pointerleave",function(){b.style.transform=""})});
+/* cursor */
+if(matchMedia("(pointer:fine)").matches&&!RM){var c=$("#cur"),cx0=0,cy0=0,tx=0,ty=0;
+ addEventListener("pointermove",function(e){tx=e.clientX;ty=e.clientY;c.classList.add("v")},{passive:true});
+ (function f(){cx0+=(tx-cx0)*.2;cy0+=(ty-cy0)*.2;c.style.transform="translate("+cx0+"px,"+cy0+"px)";requestAnimationFrame(f)})();
+ document.addEventListener("pointerover",function(e){c.classList.toggle("h",!!e.target.closest("a,button,.tilt,.w"))})}
+
+
+/* laboratório: demonstrações conceituais em prévias isoladas */
+var modal=$("#demoModal"),frame=$("#demoFrame"),demoTitle=$("#demoTitle"),lastFocus=null;
+var demos={
+ luxo:{title:"Casa Avelã — minimalismo",html:`<html lang="pt-br"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#eee9df;color:#27251f;font:16px Georgia,serif}.nav{display:flex;justify-content:space-between;padding:24px 7%;font:12px Arial;letter-spacing:.15em;text-transform:uppercase}.hero{min-height:78vh;padding:9vh 9%;display:grid;grid-template-columns:1.1fr .9fr;gap:5%;align-items:center}.hero h1{font:clamp(48px,8vw,100px)/.92 Georgia;margin:0 0 25px;letter-spacing:-.06em}.hero p{max-width:360px;line-height:1.7;color:#6c675d}.photo{height:60vh;min-height:300px;background:linear-gradient(140deg,#c5b7a1,#847967 55%,#d7cabb);position:relative}.photo:after{content:'FORMA · LUZ · MATÉRIA';position:absolute;bottom:20px;left:20px;color:white;font:11px Arial;letter-spacing:.2em}.btn{display:inline-block;margin-top:20px;padding:14px 20px;border:1px solid #38352d;color:inherit;text-decoration:none;font:12px Arial;letter-spacing:.1em}@media(max-width:650px){.hero{grid-template-columns:1fr}.photo{height:35vh}}</style><nav class="nav"><b>CASA AVELÃ</b><span>INTERIORES · 2026</span></nav><main class="hero"><div><small>ESPAÇOS COM IDENTIDADE</small><h1>O essencial<br>tem presença.</h1><p>Um estudo de direção visual para uma marca de interiores: tipografia editorial, respiro e uma paleta inspirada em materiais naturais.</p><a class="btn" href="https://wa.me/5598981213280?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20site%20com%20esse%20estilo." target="_blank" rel="noopener">CONHEÇA O CONCEITO ↗</a></div><div class="photo"></div></main></html>`},
+ brutal:{title:"Fora da Linha — brutalismo",html:`<html lang="pt-br"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#e7ff35;color:#101010;font:16px Arial,sans-serif}.nav{display:flex;justify-content:space-between;padding:22px 5%;border-bottom:3px solid}.hero{padding:8vh 6%;min-height:80vh}.hero h1{font:900 clamp(64px,14vw,180px)/.78 Arial;letter-spacing:-.1em;margin:5vh 0}.row{display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:3px solid;padding-top:18px}.row p{max-width:340px;line-height:1.5}.mark{font-size:clamp(50px,9vw,120px);font-weight:900;letter-spacing:-.1em}@media(max-width:600px){.row{display:block}}</style><nav class="nav"><b>FORA DA LINHA®</b><b>ESTÚDIO CRIATIVO / 026</b></nav><main class="hero"><small>IDEIAS NÃO PEDEM LICENÇA.</small><h1>FORMA<br>SEM<br>FREIO.</h1><div class="row"><p>Um conceito de site com tipografia monumental, contraste extremo e composição sem convencionalismos.</p><span class="mark">↗</span></div></main></html>`},
+ comercial:{title:"Vértice — página de conversão",html:`<html lang="pt-br"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#17243a;font:16px Arial}.nav{padding:22px 7%;display:flex;justify-content:space-between}.hero{padding:10vh 9%;background:linear-gradient(120deg,#102b54,#225f9b);color:white}.hero h1{font-size:clamp(42px,8vw,86px);line-height:.98;max-width:850px;letter-spacing:-.06em}.hero p{max-width:520px;line-height:1.6;color:#d8e7fa}.btn{display:inline-block;background:#b8f36b;color:#102b20;padding:17px 24px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:15px}.proof{display:flex;gap:30px;flex-wrap:wrap;padding:35px 9%;font-weight:bold}.proof span{padding:15px;border-left:3px solid #b8f36b}</style><nav class="nav"><b>VÉRTICE / CONSULTORIA</b><span>ESTUDO DE LANDING PAGE</span></nav><main class="hero"><small>CLAREZA PARA DECIDIR MELHOR</small><h1>Seu próximo passo começa aqui.</h1><p>Uma página comercial fictícia que organiza a mensagem, apresenta a proposta de valor e conduz o visitante a uma ação clara.</p><a class="btn" href="https://wa.me/5598981213280?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20uma%20landing%20page." target="_blank" rel="noopener">QUERO CONHECER</a></main><div class="proof"><span>01 · Entenda o cenário</span><span>02 · Encontre caminhos</span><span>03 · Decida com clareza</span></div></html>`},
+ editorial:{title:"Entrelinhas — design editorial",html:`<html lang="pt-br"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#e9e3d7;color:#27221c;font:16px Georgia}.nav{padding:22px 6%;border-bottom:1px solid #b8afa0;display:flex;justify-content:space-between;font:11px Arial;letter-spacing:.15em}.hero{padding:7vh 8%}.hero small{font:11px Arial;letter-spacing:.2em}.hero h1{font:clamp(55px,11vw,140px)/.82 Georgia;letter-spacing:-.07em;margin:7vh 0 4vh}.bottom{display:flex;justify-content:space-between;gap:25px;border-top:1px solid #aaa08f;padding-top:18px}.bottom p{max-width:400px;line-height:1.6}.orb{width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f9d7a2,#9a5839 65%,#34221d)}@media(max-width:600px){.bottom{display:block}.orb{margin-top:25px}}</style><nav class="nav"><b>ENTRELINHAS</b><span>REVISTA DE CULTURA VISUAL · Nº 026</span></nav><main class="hero"><small>ENSAIO / TEMPO E MATÉRIA</small><h1>O tempo<br>é matéria.</h1><div class="bottom"><p>Uma direção editorial para uma publicação cultural: ritmo tipográfico, composição assimétrica e uma paleta quente.</p><div class="orb"></div></div></main></html>`},
+ tech:{title:"Órbita Lab — futurismo",html:`<html lang="pt-br"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#080b16;color:#f1f5ff;font:16px Arial;overflow:hidden}.glow{position:absolute;width:65vw;height:65vw;border-radius:50%;background:#693cff;filter:blur(100px);opacity:.4;top:-20vw;right:-10vw}.nav{position:relative;padding:25px 6%;display:flex;justify-content:space-between;color:#9fa9c9;font-size:11px;letter-spacing:.16em}.hero{position:relative;min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:8%;}.hero small{color:#74f4e3;letter-spacing:.2em}.hero h1{font-size:clamp(55px,12vw,150px);line-height:.82;letter-spacing:-.09em;margin:30px 0;background:linear-gradient(100deg,#fff,#a89cff,#5df2df);background-clip:text;color:transparent}.hero p{max-width:480px;line-height:1.6;color:#aeb8d4}.orb{position:absolute;right:10%;top:25%;width:min(30vw,280px);aspect-ratio:1;border:1px solid #a89cff;border-radius:50%;box-shadow:0 0 60px #724cff,inset 0 0 60px #1b9eaa}.orb:before,.orb:after{content:'';position:absolute;inset:18%;border:1px solid #5df2df;border-radius:50%;transform:rotateX(65deg) rotate(35deg)}.orb:after{transform:rotateX(65deg) rotate(-35deg)}@media(max-width:650px){.orb{opacity:.35;right:-5%;top:20%}}</style><div class="glow"></div><nav class="nav"><b>ÓRBITA LAB</b><span>EXPERIÊNCIAS DIGITAIS / 2026</span></nav><main class="hero"><small>DESIGN · TECNOLOGIA · MOVIMENTO</small><h1>BEYOND<br>THE PIXEL.</h1><p>Uma experiência conceitual de tecnologia com luz, profundidade e tipografia expressiva.</p><div class="orb"></div></main></html>`}
+};
+function closeDemo(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.style.overflow="";frame.srcdoc="";if(lastFocus)lastFocus.focus()}
+$$("[data-demo]").forEach(function(b){b.addEventListener("click",function(){var d=demos[b.dataset.demo];if(!d)return;lastFocus=b;demoTitle.textContent=d.title;frame.srcdoc=d.html;modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";$(".demo-close").focus()})});
+$$("[data-close-demo]").forEach(function(b){b.addEventListener("click",closeDemo)});
+addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("open"))closeDemo()});
+
+upd();
+})();
+</script>
+</body>
+</html>
